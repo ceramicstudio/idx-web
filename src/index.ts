@@ -1,3 +1,4 @@
+import { CeramicApi } from '@ceramicnetwork/ceramic-common'
 import Ceramic from '@ceramicnetwork/ceramic-http-client'
 import { AuthenticateOptions, IDX, IDXOptions } from '@ceramicstudio/idx'
 // @ts-ignore
@@ -6,7 +7,7 @@ import { EthereumAuthProvider, ThreeIdConnect } from '3id-connect'
 const DEFAULT_CERAMIC_URL = 'https://ceramic.3boxlabs.com'
 
 export interface IDXWebOptions extends Omit<IDXOptions, 'ceramic'> {
-  ceramic?: Ceramic | string
+  ceramic?: CeramicApi | string
   connect?: ThreeIdConnect | string
 }
 
